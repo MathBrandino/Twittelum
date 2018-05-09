@@ -1,5 +1,6 @@
 package br.com.caelum.twittelum.modelo;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,7 +21,7 @@ public class Tweet {
     private Usuario dono;
     private String conteudo;
     private String foto;
-    @OneToMany(mappedBy = "tweet")
+    @OneToMany(mappedBy = "tweet", cascade = CascadeType.REMOVE)
     private List<Curtida> curtidas = new ArrayList<>();
     private LocalDateTime data;
 

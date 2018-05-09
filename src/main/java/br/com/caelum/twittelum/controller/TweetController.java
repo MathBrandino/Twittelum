@@ -9,6 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,11 +48,22 @@ public class TweetController {
 
 
     @PostMapping
-    public ResponseEntity salva(@RequestBody Tweet tweet){
+    public ResponseEntity salva(@RequestBody Tweet tweet) {
 
         Tweet tweetSalvo = tweetDao.save(tweet);
 
         return getTweet(tweetSalvo.getId());
+
+    }
+
+
+    @DeleteMapping
+    public ResponseEntity deleta(@RequestBody Tweet tweet) {
+
+        tweetDao.deleteById(tweet.getId());
+
+        return ResponseEntity.ok().body("Tweet removido com sucesso");
+
 
     }
 
