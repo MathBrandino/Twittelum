@@ -1,5 +1,7 @@
 package br.com.caelum.twittelum.modelo;
 
+import br.com.caelum.twittelum.modelo.dto.TweetComCurtidor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +23,16 @@ public class Curtida {
     @ManyToOne
     private Usuario curtidor;
     private LocalDateTime horario;
+
+    @Deprecated
+    public Curtida() {
+    }
+
+    public Curtida(TweetComCurtidor tweetComCurtidor) {
+        this.curtidor = tweetComCurtidor.getCurtidor();
+        this.tweet = tweetComCurtidor.getTweet();
+        this.horario = LocalDateTime.now();
+    }
 
     public Tweet getTweet() {
         return tweet;
