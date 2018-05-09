@@ -14,7 +14,11 @@
   
     - responsavel por todas as interações entre o device e o servidor para falar sobre tweets
  
- 
+  * CurtidaController
+  
+    - responsavel por curtir ou descurtir um tweet
+    
+     
  ## Especificações do projeto
  
    * Spring Boot 
