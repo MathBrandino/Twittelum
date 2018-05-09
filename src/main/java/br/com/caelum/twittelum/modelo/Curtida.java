@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Curtida {
 
@@ -14,6 +16,7 @@ public class Curtida {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
+    @JsonIgnore
     private Tweet tweet;
     @ManyToOne
     private Usuario curtidor;
@@ -41,5 +44,13 @@ public class Curtida {
 
     public void setHorario(LocalDateTime horario) {
         this.horario = horario;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
