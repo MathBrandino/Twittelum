@@ -1,4 +1,4 @@
-package br.com.caelum.twittelum;
+package br.com.caelum.twittelum.controller;
 
 import br.com.caelum.twittelum.dao.TweetDao;
 import br.com.caelum.twittelum.modelo.Tweet;
