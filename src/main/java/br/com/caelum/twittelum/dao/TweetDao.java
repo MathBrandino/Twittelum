@@ -17,4 +17,6 @@ public interface TweetDao extends Repository<Tweet, Long> {
     Tweet save(Tweet tweet);
 
     void deleteById(Long id);
+
+    void deleteAll();
 }
