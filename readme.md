@@ -24,6 +24,12 @@
     - responsavel por criar e logar usuarios
         
     
+### Task
+
+   * AtualizadorTask
+    
+       - responsavel por ressucitar o servidor a cada 10 minutos no heroku
+       - responsavel por limpar os tweets a cada mês
      
  ## Especificações do projeto
  
