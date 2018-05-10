@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class AtualizadorTask {
 
     private static final int DEZ_MINUTOS = 1000 * 60 * 10;
-    private static final String TODO_DIA_1_A_MEIA_NOITE = "0 0 0 1 * * *";
+    private static final String TODO_DIA_1_A_MEIA_NOITE = "0 0 0 1 * *";
 
     private TweetDao tweetDao;
 
