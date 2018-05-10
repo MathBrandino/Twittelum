@@ -18,6 +18,12 @@
   
     - responsavel por curtir ou descurtir um tweet
     
+        
+  * UsuarioController
+  
+    - responsavel por criar e logar usuarios
+        
+    
      
  ## Especificações do projeto
  
