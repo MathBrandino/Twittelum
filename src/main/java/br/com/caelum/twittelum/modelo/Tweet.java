@@ -75,4 +75,9 @@ public class Tweet {
     public void setCurtidas(List<Curtida> curtidas) {
         this.curtidas = curtidas;
     }
+
+
+    public void setData(String data){
+        this.data = LocalDateTime.parse(data);
+    }
 }
