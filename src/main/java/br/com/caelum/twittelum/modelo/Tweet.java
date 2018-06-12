@@ -56,9 +56,6 @@ public class Tweet {
         return data;
     }
 
-    public void setData(LocalDateTime data) {
-        this.data = data;
-    }
 
     public String getFoto() {
         return foto;
@@ -77,7 +74,7 @@ public class Tweet {
     }
 
 
-    public void setData(String data){
+    public void setData(String data) {
         this.data = LocalDateTime.parse(data);
     }
 }
