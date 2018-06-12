@@ -49,7 +49,7 @@ public class UsuarioController {
         Optional<Usuario> usuarioExistente = usuarioDao.findByUsernameAndSenha(usuario.getUsername(), usuario.getSenha());
 
         if (usuarioExistente.isPresent()) {
-            return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+            return ResponseEntity.status(HttpStatus.ACCEPTED).body(usuarioExistente.get());
         }
 
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario não encontrado na base");
