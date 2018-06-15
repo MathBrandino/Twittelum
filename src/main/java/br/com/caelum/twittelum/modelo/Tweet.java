@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
@@ -22,6 +23,7 @@ public class Tweet {
     private Usuario dono;
     @Size(max = 240)
     private String conteudo;
+    @Lob
     private String foto;
     @OneToMany(mappedBy = "tweet", cascade = CascadeType.REMOVE)
     private List<Curtida> curtidas = new ArrayList<>();
