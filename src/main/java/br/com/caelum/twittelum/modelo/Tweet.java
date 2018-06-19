@@ -29,6 +29,9 @@ public class Tweet {
     private List<Curtida> curtidas = new ArrayList<>();
     private LocalDateTime data;
 
+    private double latitude;
+    private double longitude;
+
 
     public Usuario getDono() {
         return dono;
@@ -78,5 +81,21 @@ public class Tweet {
 
     public void setData(String data) {
         this.data = LocalDateTime.parse(data);
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }
