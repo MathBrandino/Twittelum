@@ -22,7 +22,7 @@ public class Tweet {
     @ManyToOne
     private Usuario dono;
     @Size(max = 240)
-    private String conteudo;
+    private String mensagem;
     @Lob
     private String foto;
     @OneToMany(mappedBy = "tweet", cascade = CascadeType.REMOVE)
@@ -41,12 +41,12 @@ public class Tweet {
         this.dono = dono;
     }
 
-    public String getConteudo() {
-        return conteudo;
+    public String getMensagem() {
+        return mensagem;
     }
 
-    public void setConteudo(String conteudo) {
-        this.conteudo = conteudo;
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
     }
 
     public Long getId() {
