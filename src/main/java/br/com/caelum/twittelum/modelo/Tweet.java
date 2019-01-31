@@ -27,7 +27,7 @@ public class Tweet {
     private String foto;
     @OneToMany(mappedBy = "tweet", cascade = CascadeType.REMOVE)
     private List<Curtida> curtidas = new ArrayList<>();
-    private LocalDateTime data;
+    private LocalDateTime data = LocalDateTime.now();
 
     private double latitude;
     private double longitude;
